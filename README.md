@@ -1,4 +1,8 @@
 # coding-challenge
+
+<p>Get the code</p>
+git clone 
+
 <p>Instructions to import data from huggingface database to zammad, using linux:</p>
 <code>export ZAMMAD_TOKEN={ZAMMAD_TOKEN}</code><br>
 <code> pip install requests pandas httpimport</code><br>
