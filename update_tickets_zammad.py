@@ -5,9 +5,6 @@ import pandas as pd
 import httpimport
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
-
-#url = 'https://github.com/deepopinion/zammad-utils-cc/tree/v1.0.0/zammad'
-#with httpimport.remote_repo(["ticket"], url):
 import ticket
     
 tokenizer = AutoTokenizer.from_pretrained("finiteautomata/bertweet-base-sentiment-analysis")
@@ -15,7 +12,7 @@ model = AutoModelForSequenceClassification.from_pretrained("finiteautomata/bertw
 
 all_ticket_list=ticket.TicketAPI().list_tickets()
 
-for ticket_info in [all_ticket_list[0]]:  
+for ticket_info in all_ticket_list:  
     ticket_obj= ticket.TicketAPI()
     cur_ticket=ticket_obj.get_articles_by_ticket_id(ticket_info['id'])
     inputs = tokenizer(cur_ticket[0]['body'], return_tensors="pt")
