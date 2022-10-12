@@ -1,7 +1,6 @@
 # coding-challenge
 
-<p>Get the code</p>
-git clone 
+<code>git clone </code>
 
 <p>Instructions to import data from huggingface database to zammad, using linux:</p>
 <code>export ZAMMAD_TOKEN={ZAMMAD_TOKEN}</code><br>
