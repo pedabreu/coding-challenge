@@ -3,9 +3,6 @@
 import requests
 import pandas as pd
 import httpimport
-
-#url = 'https://github.com/deepopinion/zammad-utils-cc/tree/v1.0.0/zammad'
-#with httpimport.remote_repo(["ticket"], url):
 import ticket
 
 r = requests.get('https://datasets-server.huggingface.co/first-rows?dataset=milesbutler%2Fconsumer_complaints&config=milesbutler--consumer_complaints&split=train')
